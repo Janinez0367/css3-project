@@ -1,26 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet"><!--title font-->
+  <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet"><!--text font-->
   <meta charset="utf-8">
   <title>Disguised-CSS3 Project</title>
   <style>
   #grad1 {
-    background-image: linear-gradient(black, white, black);
+    height: 500px;
+    background-image: radial-gradient(farthest-side at 50% 55%, white,black);/*gradient background not including title bg*/
 }
- h1 {
+ .title {
   border: solid;
-  border-image: url(border.png ) 50 round;
+  border-image: url(border.png ) 100 round;
   border-width: 15px;
   text-align:center;
-  background-image:;
+  background-image: radial-gradient(farthest-side at 50% 50%, white,black);
+  font-size:60px;
+  font-family: 'Creepster', cursive;
+  transition:2s;/*amount time for animation to happen*/
+}
+ul{
+  padding:50px;
+  margin:0;
+}
+ul li{
+  list-style:none;
+  float:left;
+  text-align:center;
+  transform:text;
+  font-family: 'Nosifer', cursive;
+  font-size:35px;
+  color:darkred;
+  transition:2s;
+}
+ul:hover li{/*when mouse is about content*/
+  transform: rotateY(360deg);
+}
+.girl{
+  width: 120px;
+  height: 100px;
+  position: relative;
+  left: 150px;
+  bottom:250px;
+}
+.girl:hover{
+  width: 120px;
+  height: 100px;
+  box-shadow: 5px 5px 5px white;
+}
+.boy{
+  width: 120px;
+  height: 100px;
+  position: relative;
+  left: 450px;
+  bottom:330px;
+}
+.boy:hover{
+  width: 120px;
+  height: 100px;
+  box-shadow: 5px 5px 5px white;/*shadow appears for box*/cle
+}
+.girl-boy{
+  width: 0;
+  height: 100px;
+  position: relative;
+  left: 60px;
+  bottom:100px;
+  animation-name: spin;
+  animation-duration: 4s;
+}
+@keyframes spin {
+  from {bottom: 0px;}/*content  will move*/
+  to {bottom: 200px;}
 }
 
   </style>
 </head>
 <body>
-  <!--<div id="grad1">-->
-  <h1>Disguised </h1> <br> 
-  Come See This Scary Movie 
+    <div id="grad1">
+
+  <div class=title> 
+  Disguised
+  </div> <br>
+  <ul>
+    <li>C</li>  
+    <li>O</li>  
+    <li>M</li>  
+    <li>E</li>  
+    <br>
+    <br>
+    <li>S</li>  
+    <li>E</li>  
+    <li>E</li>  
+    <br> 
+    <br>
+    <li>T</li>  
+    <li>H</li>  
+    <li>I</li>  
+    <li>S</li>  
+    <br> 
+    <br>
+    <li>S</li>  
+    <li>C</li>  
+    <li>A</li>  
+    <li>R</li>  
+    <li>Y</li>  
+    <br>
+    <br> 
+    <li>M</li>
+    <li>O</li>  
+    <li>V</li>  
+    <li>I</li>  
+    <li>E</li>  
+  </ul>
   
+  <div class="girl-boy">
+    <img src="girl-boy.png"  width="120" height="100">
+  </div>
+  
+  <div class="boy">
+     <img src="boy.png"  width="120" height="100">
+  </div>
+    
+  <div class="girl">
+        <img src="girl.png"  width="120" height="100">
+  </div>
 </body>
 </html>
